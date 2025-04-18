@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
 
 <body>
@@ -177,82 +178,378 @@
         <section class="breadcrumb bg_img ul_li" data-background="assets/img/bg/breadcrumb_bg.jpg">
             <div class="container">
                 <div class="breadcrumb__content text-center">
-                    <h2 class="breadcrumb__title">Academic Excellence Report</h2>
-                    <p class="breadcrumb__desc">A comprehensive overview of academic performance across sessions, highlighting top performers and institutional achievements.</p>
+                    <h2 class="breadcrumb__title">Our Faculty</h2>
+                    <p class="breadcrumb__desc">A comprehensive overview of academic performance across sessions.</p>
                 </div>
             </div>
         </section>
         <!-- breadcrumb end -->
         
+
+    <section>
+        <style>
         
         
-
-
-        <section style="padding: 30px 0; background-color: #f8f9fa;">
-            <div class="container">
-              <div style="margin-bottom: 40px; text-align: center;">
-                
-                <div style="content: ''; position: absolute; width: 50%; height: 4px; background: linear-gradient(to right, #4a6cf7, #6d28d9); bottom: -10px; left: 25%; border-radius: 4px;"></div>
+            .faculty-section {
+                padding: 80px 0;
+                /* background: linear-gradient(to right, #f8f9fa, #e9ecef); */
+            }
             
-              </div>
-          
-              <div style="max-width: 1200px; margin: 0 auto; background-color: white; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border-radius: 16px; overflow: hidden; position: relative;">
-                <div style="display: flex; justify-content: space-around; background: linear-gradient(to right, #4a6cf7, #6d28d9); padding: 20px; color: white; margin-bottom: 20px; flex-wrap: wrap;">
-                  <div style="text-align: center; padding: 10px;">
-                    <div style="font-size: 24px; font-weight: 600; margin-bottom: 5px;">100%</div>
-                    <div style="font-size: 14px; opacity: 0.8;">Success Rate</div>
-                  </div>
-                  <div style="text-align: center; padding: 10px;">
-                    <div style="font-size: 24px; font-weight: 600; margin-bottom: 5px;">735</div>
-                    <div style="font-size: 14px; opacity: 0.8;">Total Students</div>
-                  </div>
-                  <div style="text-align: center; padding: 10px;">
-                    <div style="font-size: 24px; font-weight: 600; margin-bottom: 5px;">79</div>
-                    <div style="font-size: 14px; opacity: 0.8;">Students 90%+</div>
-                  </div>
-                  <div style="text-align: center; padding: 10px;">
-                    <div style="font-size: 24px; font-weight: 600; margin-bottom: 5px;">283</div>
-                    <div style="font-size: 14px; opacity: 0.8;">Students 80%+</div>
-                  </div>
+            .section-title {
+                text-align: center;
+                margin-bottom: 50px;
+                color: #343a40;
+                position: relative;
+            }
+            
+            .section-title:after {
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 3px;
+                background-color: #6e0711;
+                bottom: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .carousel-inner {
+                padding: 20px 0;
+            }
+            
+            .faculty-card {
+                background-color: #fff;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                height: 100%;
+                transition: all 0.3s ease;
+                margin: 0 10px;
+            }
+            
+            .faculty-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            }
+            
+            .faculty-img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+            
+            .faculty-card:hover .faculty-img {
+                transform: scale(1.05);
+            }
+            
+            .faculty-info {
+                padding: 20px;
+            }
+            
+            .faculty-name {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #212529;
+                margin-bottom: 5px;
+            }
+            
+            .faculty-subject {
+                color: #60060f;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+            
+            .faculty-desc {
+                color: #6c757d;
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            
+            .social-links {
+                display: flex;
+                gap: 10px;
+            }
+            
+            .social-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                background-color: #f8f9fa;
+                color: #495057;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+            
+            .social-link:hover {
+                background-color: #60060f;
+                color: #fff;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+                background-color: #60060f;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0.8;
+            }
+            
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .carousel-control-prev {
+                left: -20px;
+            }
+            
+            .carousel-control-next {
+                right: -20px;
+            }
+            
+            .carousel-indicators {
+                bottom: -50px;
+            }
+            
+            .carousel-indicators [data-bs-target] {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin: 0 5px;
+            }
+            
+            .carousel-indicators .active {
+                background-color: #60060f;
+            }
+            
+            .faculty-details {
+                margin-top: 15px;
+                font-size: 0.85rem;
+            }
+            
+            .faculty-details i {
+                color: #60060f;
+                width: 20px;
+                margin-right: 5px;
+            }
+            
+            .contact-btn {
+                display: inline-block;
+                background-color: #60060f;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+                margin-top: 15px;
+                transition: all 0.3s ease;
+            }
+            
+            .contact-btn:hover {
+                background-color: #60060f;
+                transform: translateY(-3px);
+            }
+            
+            @media (max-width: 767px) {
+                .carousel-control-prev,
+                .carousel-control-next {
+                    display: none;
+                }
+                
+                .faculty-card {
+                    margin-bottom: 20px;
+                }
+            }
+        </style>
+
+        <section class="faculty-section">
+            <div class="container">
+                <div id="facultyCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- First Slide -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="faculty-card">
+                                        <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                        <div class="faculty-info">
+                                            <h4 class="faculty-name">Teacher Name</h4>
+                                            <p class="faculty-subject">Subject Name</p>
+                                            <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                            <div class="faculty-details">
+                                                <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="faculty-card">
+                                        <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                        <div class="faculty-info">
+                                            <h4 class="faculty-name">Teacher Name</h4>
+                                            <p class="faculty-subject">Subject Name</p>
+                                            <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                            <div class="faculty-details">
+                                                <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-4">
+                                        <div class="faculty-card">
+                                            <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                            <div class="faculty-info">
+                                                <h4 class="faculty-name">Teacher Name</h4>
+                                                <p class="faculty-subject">Subject Name</p>
+                                                <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                                <div class="faculty-details">
+                                                    <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Second Slide -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="faculty-card">
+                                        <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                        <div class="faculty-info">
+                                            <h4 class="faculty-name">Teacher Name</h4>
+                                            <p class="faculty-subject">Subject Name</p>
+                                            <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                            <div class="faculty-details">
+                                                <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="faculty-card">
+                                        <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                        <div class="faculty-info">
+                                            <h4 class="faculty-name">Teacher Name</h4>
+                                            <p class="faculty-subject">Subject Name</p>
+                                            <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                            <div class="faculty-details">
+                                                <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-4">
+                                        <div class="faculty-card">
+                                            <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                            <div class="faculty-info">
+                                                <h4 class="faculty-name">Teacher Name</h4>
+                                                <p class="faculty-subject">Subject Name</p>
+                                                <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                                <div class="faculty-details">
+                                                    <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Third Slide -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="faculty-card">
+                                        <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                        <div class="faculty-info">
+                                            <h4 class="faculty-name">Teacher Name</h4>
+                                            <p class="faculty-subject">Subject Name</p>
+                                            <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                            <div class="faculty-details">
+                                                <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="faculty-card">
+                                        <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                        <div class="faculty-info">
+                                            <h4 class="faculty-name">Teacher Name</h4>
+                                            <p class="faculty-subject">Subject Name</p>
+                                            <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                            <div class="faculty-details">
+                                                <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-4">
+                                        <div class="faculty-card">
+                                            <img src="assets/img/facultydummy.png" alt="Professor Jessica Reynolds" class="faculty-img">
+                                            <div class="faculty-info">
+                                                <h4 class="faculty-name">Teacher Name</h4>
+                                                <p class="faculty-subject">Subject Name</p>
+                                                <p class="faculty-desc">Specializes in artificial intelligence and machine learning algorithms.</p>
+                                                <div class="faculty-details">
+                                                    <p><i class="fas fa-book"></i>Years Of Experience</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Control buttons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#facultyCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#facultyCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
                 </div>
-          
-                <div class="table-responsive" style="overflow-x: auto;">
-                  <table class="table" style="margin-bottom: 0;">
-                    <thead>
-                      <tr style="background-color: #f8f9fa;">
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">Session</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">Result</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">Total</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">90%+</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">80%+</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">Topper's Name</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">Topper's %</th>
-                        <th style="padding: 16px; text-transform: uppercase; font-size: 14px;">School</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>2023-24</td><td>100%</td><td>47</td><td>4</td><td>18</td><td>SHREYA PRASAD</td><td>96.20%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2022-23</td><td>100%</td><td>66</td><td>5</td><td>26</td><td>VEDANT YADAV</td><td>95.20%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2021-22</td><td>100%</td><td>71</td><td>3</td><td>23</td><td>PRISHA CHOPRA</td><td>95.00%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2020-21</td><td>100%</td><td>76</td><td>11</td><td>33</td><td>KHUSHI GUPTA</td><td>96.20%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2019-20</td><td>100%</td><td>49</td><td>10</td><td>24</td><td>ISHIKA AGARWAL</td><td>96.00%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2018-19</td><td>100%</td><td>51</td><td>12</td><td>20</td><td>KHUSHI SINGH</td><td>95.40%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2017-18</td><td>100%</td><td>50</td><td>6</td><td>23</td><td>KHUSHI KESHRI</td><td>96.80%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2016-17</td><td>100%</td><td>34</td><td>6</td><td>18</td><td>SHWETA SINGH</td><td>96.20%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2015-16</td><td>100%</td><td>30</td><td>4</td><td>16</td><td>SHWETA SINGH</td><td>95.00%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2014-15</td><td>100%</td><td>21</td><td>2</td><td>8</td><td>RAVI KUMAR</td><td>91.20%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2013-14</td><td>100%</td><td>24</td><td>4</td><td>13</td><td>NEHA SINGH</td><td>95.00%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2012-13</td><td>100%</td><td>24</td><td>6</td><td>12</td><td>VIVEK KUMAR</td><td>93.00%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                      <tr><td>2011-12</td><td>100%</td><td>20</td><td>5</td><td>10</td><td>MANISHA</td><td>91.80%</td><td>ST. XAVIER'S HIGH SCHOOL</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
             </div>
         </section>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Initialize carousel with options
+            document.addEventListener('DOMContentLoaded', function() {
+                const myCarousel = new bootstrap.Carousel(document.getElementById('facultyCarousel'), {
+                    interval: 5000,  // Change slides every 5 seconds
+                    wrap: true,      // Continuous loop
+                    touch: true      // Enable touch swiping on mobile
+                });
+            });
+        </script>
+    </section>
           
-
-
     </main>
     <!-- main area end  -->
     
