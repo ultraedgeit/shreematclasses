@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="assets/css/recoleta-font.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
 
 <body>
@@ -36,15 +38,16 @@
 </div>
 <!-- backtotop - end -->
 
-    <!-- Preloader - Start -->
-    <div id="preloader">
-        <div id="loader" class="loader">
-            <div class="loader-container">
-                <div class="loader-icon"><img src="assets/img/logo/preloader.png" alt="preloader"></div>
-            </div>
-        </div>              
-    </div>
-    <!-- Preloader - End -->
+ <!-- Preloader - Start -->
+ <div id="preloader">
+    <div id="loader" class="loader">
+        <div class="loader-container">
+            <div class="loader-icon"><img src="assets/img/logo/preloader.png" alt="preloader"></div>
+        </div>
+    </div>              
+</div>
+<!-- Preloader - End -->
+
 
 <div class="body_wrap">
 
@@ -154,7 +157,7 @@
         </div>
     </header>
     <!-- header end -->
-    
+
     <!-- header search start -->
     <div class="header-search-form-wrapper">
         <div class="xb-search-close xb-close"></div>
@@ -176,324 +179,440 @@
             <div class="container">
                 <div class="breadcrumb__content text-center">
                     <h2 class="breadcrumb__title">Our Courses</h2>
-                    <p class="breadcrumb__desc">Empowering Wide Range of Learning Opportunities</p>
+                    <p class="breadcrumb__desc">A comprehensive overview of academic performance across sessions.</p>
                 </div>
             </div>
         </section>
         <!-- breadcrumb end -->
+        
 
-        <!-- courses start -->
-        <section class="courses pt-120 pb-120">
-            <div class="container">
-                <div class="text-center">
-                    <div class="program-menu mb-70 text-center">
-                        <button class="active" data-filter="*">ALL</button>
-                        <button data-filter=".cat1" class="">Development</button>
-                        <button data-filter=".cat2">Construction</button>
-                        <button data-filter=".cat3">Science</button>
-                        <button data-filter=".cat4">Art & Design</button>
-                        <button data-filter=".cat5">Marketing</button>
-                    </div> 
+    <section class="pt-120">
+        <style>
+            .container-cr {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            
+            .level-tabs {
+                display: flex;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid #dee2e6;
+            }
+            
+            .level-tab {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: #6c757d;
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                transition: all 0.2s ease;
+            }
+            
+            .level-tab.active {
+                color: #0d6efd;
+                border-bottom-color: #0d6efd;
+            }
+            
+            .level-tab:hover:not(.active) {
+                color: #212529;
+            }
+            
+            .courses-section {
+                margin-bottom: 3rem;
+            }
+            
+            .level-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                color: #212529;
+                display: flex;
+                align-items: center;
+            }
+            
+            .level-title::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                background-color: #dee2e6;
+                margin-left: 1rem;
+            }
+            
+            .subject-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            .subject-card {
+                background-color: white;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                transition: all 0.2s ease;
+                cursor: pointer;
+            }
+            
+            .subject-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            
+            .subject-color {
+                height: 4px;
+            }
+            
+            .subject-content {
+                padding: 1rem;
+            }
+            
+            .subject-name {
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+                color: #212529;
+            }
+            
+            .subject-count {
+                font-size: 0.75rem;
+                color: #6c757d;
+            }
+            
+            /* Subject color codes */
+            .science { background-color: #4361ee; }
+            .math { background-color: #3a0ca3; }
+            .english { background-color: #4cc9f0; }
+            .history { background-color: #f72585; }
+            .geography { background-color: #4d908e; }
+            .physics { background-color: #277da1; }
+            .chemistry { background-color: #f9c74f; }
+            .biology { background-color: #90be6d; }
+            .computer { background-color: #9d4edd; }
+            .economics { background-color: #ff9e00; }
+            .accounting { background-color: #06d6a0; }
+            .statistics { background-color: #073b4c; }
+            .literature { background-color: #ef476f; }
+            .sociology { background-color: #118ab2; }
+            .psychology { background-color: #ffadad; }
+            
+            .empty-message {
+                text-align: center;
+                padding: 2rem;
+                color: #6c757d;
+                background-color: white;
+                border-radius: 8px;
+                border: 1px dashed #dee2e6;
+            }
+        </style>
+
+        <div class="container-cr">        
+        <div class="courses-section">
+            <h2 class="level-title">SSC Courses</h2>
+            
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="subject-color science"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">General Science</h3>
+                        <p class="subject-count">8 chapters</p>
+                    </div>
                 </div>
-                <div class="row grid mt-none-30">
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat1 cat4">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img01.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Medical</span>
-                                    <div class="xb-item--rating"><span>5.0</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="#!">MBA in Biomedical Engineering..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">200 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color math"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Mathematics</h3>
+                        <p class="subject-count">12 chapters</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat3 cat5 cat4">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img02.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Management</span>
-                                    <div class="xb-item--rating"><span>4.5</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">MBA in Advanced Construction..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">250 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color english"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">English</h3>
+                        <p class="subject-count">8 chapters</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat2 cat5 cat3">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img03.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Construction</span>
-                                    <div class="xb-item--rating"><span>5.0</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">MBA in Management and Strategic..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">280 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color history"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">History</h3>
+                        <p class="subject-count">6 chapters</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat1 cat2">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img04.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Engineering</span>
-                                    <div class="xb-item--rating"><span>5.0</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">MBA in Mechanical Engineering..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">220 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color geography"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Geography</h3>
+                        <p class="subject-count">5 chapters</p>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat2 cat5 cat4">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img05.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Energy</span>
-                                    <div class="xb-item--rating"><span>5.0</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">MBA in Sustainable Energy..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">200 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat2 cat4">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img06.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Real Estate</span>
-                                    <div class="xb-item--rating"><span>4.9</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">MBA in Real Estate and Urban..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">230 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat5 cat2 cat3">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img07.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Business</span>
-                                    <div class="xb-item--rating"><span>4.9</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">BA in International Business..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">200 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat2 cat4">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img08.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Engineering</span>
-                                    <div class="xb-item--rating"><span>5.0</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">MBA in Mechanical Engineering..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">220 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">16 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat1 cat5 cat3">
-                        <div class="xb-program__wrapper mt-30">
-                            <div class="xb-item--img text-center">
-                                <a href="course-single.html"><img src="assets/img/program/pro-img09.png" alt=""></a>
-                            </div>
-                            <div class="xb-item--holder">
-                                <div class="xb-item--deprt ul_li_between">
-                                    <span class="xb-item--group"># Digital Art</span>
-                                    <div class="xb-item--rating"><span>4.9</span> <img src="assets/img/icon/rating.png" alt=""></div>
-                                </div>
-                                <h2 class="xb-item--title border-effect-2"><a href="course-single.html">BFA in Digital Art and Design..</a></h2>
-                                <ul class="xb-item--meta ul_li">
-                                    <li><img src="assets/img/icon/meta-icon01.png" alt="">280 Seat</li>
-                                    <li><img src="assets/img/icon/clock.png" alt="">14 Semester</li>
-                                </ul>
-                                <div class="xb-item--dep-btn">
-                                    <a href="course-single.html">enroll now</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color computer"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Computer Science</h3>
+                        <p class="subject-count">7 chapters</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- courses end -->
+        </div>
 
+        <div class="courses-section">
+            <h2 class="level-title">HSC Courses</h2>
+            
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="subject-color physics"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Physics</h3>
+                        <p class="subject-count">10 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color chemistry"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Chemistry</h3>
+                        <p class="subject-count">9 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color biology"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Biology</h3>
+                        <p class="subject-count">8 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color math"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Higher Mathematics</h3>
+                        <p class="subject-count">12 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color english"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">English Literature</h3>
+                        <p class="subject-count">6 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color economics"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Economics</h3>
+                        <p class="subject-count">7 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color accounting"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Accounting</h3>
+                        <p class="subject-count">8 chapters</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color computer"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Computer Science</h3>
+                        <p class="subject-count">9 chapters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="courses-section">
+            <h2 class="level-title">Graduation Courses</h2>
+            
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <div class="subject-color computer"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Computer Science</h3>
+                        <p class="subject-count">14 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color physics"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Physics</h3>
+                        <p class="subject-count">12 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color chemistry"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Chemistry</h3>
+                        <p class="subject-count">10 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color biology"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Biology</h3>
+                        <p class="subject-count">9 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color math"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Mathematics</h3>
+                        <p class="subject-count">13 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color statistics"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Statistics</h3>
+                        <p class="subject-count">8 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color economics"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Economics</h3>
+                        <p class="subject-count">11 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color literature"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Literature</h3>
+                        <p class="subject-count">9 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color psychology"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Psychology</h3>
+                        <p class="subject-count">10 courses</p>
+                    </div>
+                </div>
+                
+                <div class="subject-card">
+                    <div class="subject-color sociology"></div>
+                    <div class="subject-content">
+                        <h3 class="subject-name">Sociology</h3>
+                        <p class="subject-count">8 courses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+          
     </main>
     <!-- main area end  -->
     
    <!-- footer strt -->
-    <footer class="footer bg_img pos-rel pt-20" data-background="assets/img/bg/footer-bg.jpg">
-        <div class="xb-footer-wrap">
+   <footer class="footer footer-style-three bg_img mt-100 pos-rel" data-background="assets/img/bg/footer-bg03.jpg">
+    <div class="xb-footer-wrap">
+        <div class="xb-footer-main hs-footer-main">
             <div class="container">
-                <div class="footer-cta ul_li_between mb-35">
-                    <div class="xb-item--holder ul_li mt-30">
-                        <div class="xb-item--icon-avatar ul_li">
-                            <span><img src="assets/img/icon/calling-icon01.png" alt=""></span>
-                            <div class="xb-item--avatar">
-                                <img src="assets/img/footer/footer-avatar.png" alt="">
-                            </div>
-                        </div>
-                        <div class="xb-item--content">
-                            If you have questions, order a free conversation <br> with our consultant.
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                        <div class="footer-widget mt-10">
+                            <div class="xb-item--logo mb-30"><a href="#!"><img src="assets/img/logo/logo_white.svg" alt=""></a></div>
+                            <span class="xb-item--details">25/1, N.I.A. Post Office, Balewadi, <br> Bristol – BS1 5TA, England, <br> United Kingdom</span>
                         </div>
                     </div>
-                    <div class="xb-item--contact mt-30">
-                        <span>or use our hotline 24h</span>
-                        <h3>+1 (415) 555‑0132</h3>
+                    <div class="col-xl-2 col-lg-4 col-md-6 mt-30">
+                        <div class="footer-widget">
+                            <h3 class="xb-item--title">Find Out More</h3>
+                            <ul class="xb-item--links list-unstyled">
+                                <li><a href="#!">Home</a></li>
+                                <li><a href="#!">About Us</a></li>
+                                <li><a href="#!">Faculty</a></li>
+                                <li><a href="#!">Gallery</a></li>
+                                <li><a href="#!">Courses</a></li>
+                            </ul>
+                        </div>
                     </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                        <div class="footer-widget change-mr">
+                            <h3 class="xb-item--title">Our Results</h3>
+                            <ul class="xb-item--links list-unstyled">
+                                <li><a href="#!">Open House</a></li>
+                                <li><a href="#!">Summer School</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
+                        <div class="footer-widget change-mr">
+                            <h3 class="xb-item--title">Connect With Us</h3>
+                            <ul class="xb-item--links list-unstyled">
+                                <li><a href="#!">WhatsApp</a></li>
+                                <li><a href="#!">Email</a></li>
+                                <li><a href="#!">Address</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
-            </div>
-            <div class="xb-footer-main pt-70 pb-60">
-                <div class="container">
-                    <div class="row mt-none-30">
-                        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-                            <div class="footer-widget mt-10">
-                                <div class="xb-item--logo mb-30"><a href="#!"><img src="assets/img/logo/logo_white.svg" alt=""></a></div>
-                                <span class="xb-item--details">25/1, N.I.A. Post Office, Balewadi, <br> Bristol – BS1 5TA, England, <br> United Kingdom</span>
-                                <div class="xb-item--meta mt-20">
-                                    <span>Social media</span>
-                                    <ul class="xb-item--social_link ul_li">
-                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#!"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9.52217 6.77491L15.4785 0H14.0671L8.89516 5.88256L4.76437 0H0L6.24656 8.89547L0 16H1.41155L6.87321 9.78782L11.2356 16H16L9.52183 6.77491H9.52217ZM7.58887 8.97384L6.95596 8.08805L1.92015 1.03974H4.0882L8.15216 6.72795L8.78507 7.61374L14.0677 15.0075H11.8997L7.58887 8.97418V8.97384Z" fill="white" />
-                                          </svg></a></li>
-                                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-6 mt-30">
-                            <div class="footer-widget">
-                                <h3 class="xb-item--title">Admissions</h3>
-                                <ul class="xb-item--links list-unstyled">
-                                    <li><a href="#!">How to apply</a></li>
-                                    <li><a href="#!">Schedule</a></li>
-                                    <li><a href="#!">Procedure</a></li>
-                                    <li><a href="#!">Eligibility</a></li>
-                                    <li><a href="#!">Fee structure</a></li>
-                                    <li><a href="#!">Scholarships</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-6 mt-30">
-                            <div class="footer-widget chng-mr">
-                                <h3 class="xb-item--title">Quick Links</h3>
-                                <ul class="xb-item--links list-unstyled">
-                                    <li><a href="#!">Press & Media</a></li>
-                                    <li><a href="#!">Alumni Portal</a></li>
-                                    <li><a href="#!">Newsletters</a></li>
-                                    <li><a href="#!">Departments</a></li>
-                                    <li><a href="#!">People Directory</a></li>
-                                    <li><a href="#!">Careers</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 mt-30">
-                            <div class="footer-widget change-mr">
-                                <h3 class="xb-item--title">Additional Links</h3>
-                                <ul class="xb-item--links list-unstyled">
-                                    <li><a href="#!">Open House</a></li>
-                                    <li><a href="#!">Summer School</a></li>
-                                    <li><a href="#!">ICCRIP 2024</a></li>
-                                    <li><a href="#!">WIC Forum</a></li>
-                                    <li><a href="#!">Placements</a></li>
-                                    <li><a href="#!">Terms & Condition</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-6 mt-30">
-                            <div class="footer-widget">
-                                <ul class="xb-item--links-btn list-unstyled">
-                                    <li><a class="thm-btn" href="#!">applying</a></li>
-                                    <li><a class="thm-btn" href="#!">visiting</a></li>
-                                    <li><a class="thm-btn" href="#!">careers</a></li>
-                                    <li><a class="thm-btn" href="#!">contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom pb-25 pt-25">
-                <div class="copyright text-center">
-                    <p>Copyright © 2024 <a href="index.html">Edubost</a>. All rights reserved.</p>
+                <div class="hs-footer-contact mt-90 ul_li_between">
+                    <ul class="xb-item--social_link ul_li mt-20">
+                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#!"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.52217 6.77491L15.4785 0H14.0671L8.89516 5.88256L4.76437 0H0L6.24656 8.89547L0 16H1.41155L6.87321 9.78782L11.2356 16H16L9.52183 6.77491H9.52217ZM7.58887 8.97384L6.95596 8.08805L1.92015 1.03974H4.0882L8.15216 6.72795L8.78507 7.61374L14.0677 15.0075H11.8997L7.58887 8.97418V8.97384Z" fill="#161A2C" />
+                            </svg></a></li>
+                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <ul class="xb-item--contact list-unstyled mt-20 col-xl-3 col-lg-4 col-md-6">
+                        <li>
+                            <span class="xb-item--text">Contact Number</span>
+                            <h3 class="xb-item--number">+91-81087-60497<h3>
+                        </li>
+                    </ul>
+                    <ul class="xb-item--contact list-unstyled mt-20 col-xl-3 col-lg-4 col-md-6">
+                        <li>
+                            <span class="xb-item--text">Our Email:</span>
+                            <h3 class="xb-item--number">temp@gmail.com</h3>
+                        </li>
+                    </ul>
+                    <!-- <ul class="xb-item--contact list-unstyled mt-20">
+                        <li>
+                            <span class="xb-item--text">Our Email:</span>
+                            <h3 class="xb-item--number">temp@gmail.com</h3>
+                        </li>
+                    </ul> -->
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom pb-35 pt-35">
+            <div class="copyright text-center">
+                <p>Copyright © 2024 <a href="index.html">Shreemat Coaching Classes</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="hs-footer-shape">
+        <div class="shape shape--one">
+            <img src="assets/img/bg/overly.jpg" alt="">
+        </div>
+        <!-- <div class="shape shape--two">
+            <img src="assets/img/shape/angle-shape02.png" alt="">
+        </div> -->
+    </div>
+</footer>
     <!-- footer end -->
 
 </div>
