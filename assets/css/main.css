@@ -43,10 +43,19 @@
 
 -----------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 :root {
   --font-body: "DM Sans", sans-serif;
   --font-heading: "Playfair Display", serif;
   --font-caveat: "Caveat", cursive;
+  /* --font-body: "Poppins", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-caveat: "Poppins", sans-serif; */
   --color-primary: #fdb714;
   --color-secondary: #60060f;
   --color-heading: #170006;
