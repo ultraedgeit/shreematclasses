@@ -42,24 +42,22 @@
     
 
 -----------------------------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
-
-* {
-  font-family: "Poppins", sans-serif;
-}
+/* @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap");
 
 :root {
   --font-body: "DM Sans", sans-serif;
   --font-heading: "Playfair Display", serif;
-  --font-caveat: "Caveat", cursive;
-  /* --font-body: "Poppins", sans-serif;
-  --font-heading: "Poppins", sans-serif;
-  --font-caveat: "Poppins", sans-serif; */
+  --font-caveat: "Caveat", cursive; */
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Merriweather:ital,wght@0,400..900;1,400..900&family=Shadows+Into+Light&display=swap");
+
+  :root {
+    --font-body: "Inter", sans-serif;
+    --font-heading: "Merriweather", serif;
+    --font-caveat: "Shadows Into Light", cursive;
   --color-primary: #fdb714;
-  --color-secondary: #60060f;
+  --color-secondary: #1f1879;
   --color-heading: #170006;
-  --color-violet: #781921;
+  --color-violet: #3E3985;
   --color-default: #5c5c54;
   --color-default-two: #606056;
   --color-sec-bg: #f1f1e9;
@@ -2574,7 +2572,7 @@ body[data-aos-easing=ease] [data-aos] {
       transition: 0.4s; }
       .header-top .xb-info ul li a:hover {
         border-radius: 2px;
-        background: #60060f; }
+        background: #3E3985; }
 
 @media (max-width: 991px) {
   .header-area .xb-header {
@@ -4419,7 +4417,7 @@ input[type=search]::-webkit-search-results-decoration {
 .hs-principle-right .xb-teacher_list li {
   border-bottom: 1px solid #161a2c; }
   .hs-principle-right .xb-teacher_list li.active a {
-    background: #d9293a;
+    background: #464196;
     border-bottom: none;
     color: var(--color-white); }
   .hs-principle-right .xb-teacher_list li a {
@@ -5903,7 +5901,7 @@ input[type=search]::-webkit-search-results-decoration {
       .sh-featuree_wrap .xb-item--holder {
         padding-right: 0; } }
   .sh-featuree_wrap .xb-item--icon {
-    background: #d9293a;
+    background: #464196;
     margin-right: 30px; }
     .sh-featuree_wrap .xb-item--icon.bg_blue {
       background: #2f76cf; }
@@ -6072,7 +6070,7 @@ input[type=search]::-webkit-search-results-decoration {
   .xb-news-left.hs-news:hover {
     box-shadow: 0 22px 33px 0 rgba(63, 104, 94, 0.28); }
     .xb-news-left.hs-news:hover .xb-link a {
-      background: #D9293A; }
+      background: #464196; }
       .xb-news-left.hs-news:hover .xb-link a span {
         -webkit-transform: translateX(5px);
         -ms-transform: translateX(5px);
@@ -6958,7 +6956,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     margin-bottom: 30px;
     color: var(--color-white); }
   .mission-vission-item .xb-item--content {
-    color: #FAD3D7;
+    color: #f0f0ff;
     font-size: 16px;
     margin-bottom: 40px;
     line-height: 26px; }
@@ -7252,7 +7250,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       padding-top: 0; } }
 
 .funfact-item .xb-item--title {
-  color: #D9293A;
+  color: #464196;
   font-size: 70px;
   display: flex;
   align-items: center;
@@ -7688,7 +7686,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       margin-right: 10px; }
     .course-sidebar__list li .price {
       font-size: 20px;
-      color: #D9293A;
+      color: #464196;
       font-weight: 700;
       margin-left: 9px; }
   .course-sidebar__social-wrap h4 {
@@ -8007,8 +8005,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       -o-transition: 0.3s;
       transition: 0.3s; }
     .thm-btn--stroke-black.hover-2:hover {
-      background-color: #D9293A;
-      border-color: #D9293A;
+      background-color: #464196;
+      border-color: #464196;
       color: var(--color-white); }
       .thm-btn--stroke-black.hover-2:hover svg path {
         fill: var(--color-white); }
@@ -8036,7 +8034,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       background-color: var(--color-primary);
       border-color: var(--color-primary); }
   .thm-btn--two {
-    background: #d9293a;
+    background: #464196;
     color: var(--color-white);
     font-weight: 700;
     margin-left: 0;
@@ -8131,7 +8129,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     .xb-backtotop .scroll i {
       color: var(--color-white); }
   .xb-backtotop.style-2 .scroll {
-    background-color: #d9293a; }
+    background-color: #464196; }
 
 /*----------------------------------------*/
 /*  19. mobile-menu
@@ -8445,7 +8443,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   width: 40px; }
 
 .preloader-two .loader .loader-container:before {
-  border-color: #d9293a; }
+  border-color: #464196; }
 
 @keyframes loaderspin {
   0% {
@@ -8761,7 +8759,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       -o-transition: 0.4s;
       transition: 0.4s; }
     .hs-footer-contact .xb-item--social_link li a:hover {
-      background: #d9293a; }
+      background: #464196; }
       .hs-footer-contact .xb-item--social_link li a:hover i {
         color: var(--color-white); }
       .hs-footer-contact .xb-item--social_link li a:hover svg path {
@@ -8788,8 +8786,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 .footer-style-three .footer-widget .xb-item--details {
   color: #CFD0D8; }
 .footer-style-three .footer-widget .xb-item--links-btn .thm-btn:hover {
-  background-color: #D9293A;
-  border-color: #D9293A;
+  background-color: #464196;
+  border-color: #464196;
   color: var(--color-white); }
 
 .clg-footer-newsletter {
