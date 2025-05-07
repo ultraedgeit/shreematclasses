@@ -5983,7 +5983,8 @@ input[type=search]::-webkit-search-results-decoration {
   .hs-about .xb-shape {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0; 
+  ;}
 
 .about-info {
   padding-right: 50px; }
@@ -8797,4 +8798,6 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     .clg-footer-newsletter {
       border: 0; } }
 
+
+      
 /*# sourceMappingURL=main.css.map */
