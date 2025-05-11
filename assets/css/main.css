@@ -5380,8 +5380,8 @@ input[type=search]::-webkit-search-results-decoration {
 .hs-testimonial_wrapper .xb-item--content {
   font-size: 20px;
   line-height: 30px;
-  border-top: 1px solid #d5e0e3;
-  padding-top: 20px;
+  /* border-top: 1px solid #d5e0e3; */
+  /* padding-top: 20px; */
   font-weight: 400; }
 .hs-testimonial_wrapper .xb-item--name {
   font-family: var(--font-body);
@@ -6920,7 +6920,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     right: 100px; }
     @media only screen and (min-width: 1200px) and (max-width: 1500px) {
       .hero-style-three .hero-right {
-        right: -50px;
+        /* right: -50px; */
         max-width: 800px; } }
     @media (max-width: 1199px) {
       .hero-style-three .hero-right {
